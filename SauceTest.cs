@@ -8,9 +8,9 @@ using System.Collections.Generic;
 
 namespace NUnit3_Tutorial
 {
-    [TestFixture("chrome", "45", "Windows 7", "", "")]
+    [TestFixture("chrome", "46", "Windows 7", "", "")]
     [TestFixture("internet explorer", "10", "Windows 7", "", "")]
-    [TestFixture("firefox", "40", "Windows 8.1", "", "")]
+    [TestFixture("firefox", "42", "Windows 8.1", "", "")]
     [TestFixture("iPhone", "9.0", "OS X 10.10", "iPad Retina", "landscape")]
     [TestFixture("Android", "5.1", "Linux", "Android Emulator", "landscape")]
     [TestFixture("Android", "4.4", "Linux", "Android Emulator", "portriat")]
