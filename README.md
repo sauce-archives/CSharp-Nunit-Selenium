@@ -1,16 +1,16 @@
 # SauceLabs C#/NUnit3.0 Tutorial
 
-NUnit is a unit-test framework for all .Net languages, written entirely in C# and designed to take advantage of many .NET language features, for example custom attributes and other reflection-related capabilities. With the latest version of the framework, NUnit 3.0, NUnit allows the ability of running tests in parallel without the need of adding the PNUnit extension. For more information and documentation about the framework, as well as how to use it in your testing, you can visit the [official NUnit website](http://www.nunit.org/index.php?p=home).
+NUnit is a unit-test framework for all .Net languages, written entirely in C# and designed to take advantage of many .NET language features, for example custom attributes and other reflection-related capabilities. With the latest version of the framework, NUnit 3.0, you can running tests in parallel without the need of adding the PNUnit extension as it was with NUnit 2.6.4. For more information and documentation about the framework, as well as how to use it in your testing, you can visit the [official NUnit website](http://www.nunit.org/index.php?p=home).
 
 ### Prerequisites
 
-You’ll need to have these components installed to set up PNUnit testing on Sauce with C# .NET:
+You’ll need to have these components installed to set up NUnit testing on Sauce with C# and .NET:
 
   1) Visual Studio
   
   2) Selenium DLLs for .NET installed and referenced by your project
   
-  3) NUnit + PNUnit Bundle
+  3) NUnit 3.0
 
 ####Create the Visual Studio Project:
 
@@ -44,7 +44,7 @@ After you’ve set up your project in Visual Studio, you need to make sure that 
 
 4) Click Browse, navigate to the directory where you saved NUnit on your machine and go to framework -> 3.0.5797.27534.
 
-5) Click on the folder of the .Net Framework version that your Visual Studio is built on. For example, if you're using the .Net 4.0 Framework, you would select the net-40 folder.
+5) Once inside the 3.0.5797.27534 folder, click on the folder of the .Net Framework version that your Visual Studio is built on. For example, if you're using the .Net 4.0 Framework, you would select the net-40 folder.
 
 6) Add the nunit.framework.dll reference to your project.
 
@@ -56,13 +56,13 @@ Now let’s take a look at a simple C# .Net project. This example test opens Goo
 
 [Parallelizable(ParallelScope.Fixtures)]
 
-Inside the constructor, we give it an ParallelScope arugement, in this case we're telling that we want TestFixtures to run in parallel with one another. You can read more about the ParallelizableAttribute in the [NUnit documentation](http://www.nunit.com/index.php?p=parallelizable&r=3.0). 
+Inside the constructor, we give it an ParallelScope arugement, in this case we're telling that we want TestFixtures to run in parallel with one another. You can read more about the ParallelizableAttribute in the [NUnit documentation](https://github.com/nunit/nunit/wiki/Parallelizable-Attribute). 
 
 NOTE: Currently, the ability to run methods in parallel within a class has not been implemented, so the only way to acheieve parallelism is with the use of different TestFixtures.
 
 ### Run the Test
 
-1) In Visual Studio, install the NUnit Test Adaptor
+1) In Visual Studio, install the NUnit 3.0 Test Adapter
   
   * Select Tools | Extension Manager.
   * In the left panel of the Extension Manager, select Online Extensions.
@@ -73,4 +73,4 @@ NOTE: Currently, the ability to run methods in parallel within a class has not b
 
 3) Build the project by going Build > Build Solution, or use the CTRL-SHIFT-B shortcut. When you initially open a solution, no tests will be displayed. After compiling the assemblies in the solution, Visual Studio will interact with the NUnit Test Adapter to discover tests and a list of them will be shown in the Test Explorer.
 
-4) Click Run All to launch your test to the Sauce Dashboard 
+4) Click Run All to launch your test to the Sauce Dashboard. If you want to run a single test from that or just a few, all you would need to do hold CTRL and left-click the test(s) in the Adapter, right-click and select the "Run Selected Tests" option.
