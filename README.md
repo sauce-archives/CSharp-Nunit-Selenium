@@ -36,5 +36,3 @@ Uses [NuGet](http://docs.nuget.org/) as package manager.
 ```nmake test``` <br>
 **or**<br>
 ```nmake all```<br>
-
-
