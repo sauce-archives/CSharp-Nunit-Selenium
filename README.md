@@ -21,20 +21,20 @@ Uses [NuGet](http://docs.nuget.org/) as package manager.
 
 #Setup:
 
-* Install NuGet packages for the project:
-```cd Packages```
-```nuget.exe install ParallelSelenium/packages.config```
+* Install NuGet packages for the project: <br>
+```cd Packages```<br>
+```nuget.exe install ..\ParallelSelenium\packages.config```<br>
 
-* Clean and rebuild project:
+* Clean and rebuild project:<br>
 ```nmake clean build```
 
-#Set Credentials:
-```set SAUCE_USERNAME=<sauce-username>```
-```set SAUCE_ACCESS_KEY=<sauce-access-key>```ss
+#Set Credentials:<br>
+```set SAUCE_USERNAME=<sauce-username>```<br>
+```set SAUCE_ACCESS_KEY=<sauce-access-key>```
 
-#Run Tests in parallel:
-```nmake test``` 
-**or**
-```nmake all```
+#Run Tests in parallel:<br>
+```nmake test``` <br>
+**or**<br>
+```nmake all```<br>
 
 
