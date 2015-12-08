@@ -32,7 +32,7 @@ Uses [NuGet](http://docs.nuget.org/) as package manager.
 ```set SAUCE_USERNAME=<sauce-username>```<br>
 ```set SAUCE_ACCESS_KEY=<sauce-access-key>```
 
-#Run Tests in parallel:<br>
+#Run Tests in parallel on [Sauce](https://saucelabs.com/beta/dashboard/tests):<br>
 ```nmake test``` <br>
 **or**<br>
 ```nmake all```<br>
