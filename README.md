@@ -1,4 +1,3 @@
-![alt](https://saucelabs.com/images/sauce-labs-logo.png)
 
 # CSharp-NUnit-NMake
 
