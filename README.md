@@ -7,6 +7,14 @@ Demonstrates how to use NUnit to run parallel tests on Sauce Labs platfrom using
 
 Uses [NuGet](http://docs.nuget.org/) as package manager.
 
+###Dependencies:
+
+* MS Visual Studio 2013 or later.
+* [NUnit3.0](https://www.nunit.org/)
+* [NuGet](https://dist.nuget.org/index.html) Plugin for Visual Studio
+* [NuGet](https://dist.nuget.org/index.html) CLI executable installed in your path.
+
+
 ### Setup:
 
 * Install NuGet packages for the project: <br>
