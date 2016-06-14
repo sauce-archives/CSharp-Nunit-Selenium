@@ -3,6 +3,7 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using PNUnit.Framework;
+using ParallelSelenium.Utils;
 
 namespace ParallelSelenium
 {
@@ -51,6 +52,8 @@ namespace ParallelSelenium
             caps.SetCapability("username", Constants.sauceUser);
             caps.SetCapability("accessKey", Constants.sauceKey);
             caps.SetCapability("name", TestContext.CurrentContext.Test.Name);
+
+            SauceUtils.addBuildNumberToDesiredCapabilities(caps);
 
             driver = new RemoteWebDriver(new Uri("http://ondemand.saucelabs.com:80/wd/hub"), caps, TimeSpan.FromSeconds(600));
             String sessionId = ((RemoteWebDriver)driver).SessionId.ToString();
