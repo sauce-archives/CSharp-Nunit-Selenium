@@ -6,7 +6,11 @@ using PNUnit.Framework;
 
 namespace ParallelSelenium
 {
-    [TestFixture]
+    [TestFixture("chrome", "46", "Windows 7", "", "")]
+    [TestFixture("internet explorer", "11", "Windows 7", "", "")]
+    [TestFixture("firefox", "41", "Windows 7", "", "")]
+    [TestFixture("chrome", "30", "Windows 7", "", "")]
+    [TestFixture("firefox", "35", "Windows 7", "", "")]
     public class ParallelSearchTests
     {
         private IWebDriver driver;
@@ -15,22 +19,6 @@ namespace ParallelSelenium
         private String os;
         private String deviceName;
         private String deviceOrientation;
-
-
-        public ParallelSearchTests()
-        {
-            String[] testParams = PNUnitServices.Get().GetTestParams();
-            if (testParams.Length > 0)
-                this.browser = testParams[0];
-            if (testParams.Length > 1)
-                this.version = testParams[1];
-            if (testParams.Length > 2)
-                this.os = testParams[2];
-            if (testParams.Length > 3)
-                this.deviceName = testParams[3];
-            if (testParams.Length > 4)
-                this.deviceOrientation = testParams[4];
-        }
 
         public ParallelSearchTests(String browser, String version, String os, String deviceName, String deviceOrientation)
         {
@@ -65,6 +53,8 @@ namespace ParallelSelenium
             caps.SetCapability("name", TestContext.CurrentContext.Test.Name);
 
             driver = new RemoteWebDriver(new Uri("http://ondemand.saucelabs.com:80/wd/hub"), caps, TimeSpan.FromSeconds(600));
+            String sessionId = ((RemoteWebDriver)driver).SessionId.ToString();
+            Console.Out.WriteLine(string.Format("SauceOnDemandSessionID={0} job-name={1}", sessionId, TestContext.CurrentContext.Test.Name));
         }
 
         [Test]
