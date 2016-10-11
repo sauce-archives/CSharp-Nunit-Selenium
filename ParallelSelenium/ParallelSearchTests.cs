@@ -68,11 +68,11 @@ namespace ParallelSelenium
             {
                 seleniumUri = String.Format(seleniumUri, Constants.seleniumRelayHost, Constants.seleniumRelayPort);
             } else {
-                seleniumUri = "http://ondemand.saucelabs.com:80/wd/hub";
+                seleniumUri = "https://ondemand.saucelabs.com:443/wd/hub";
             }
             capabilities.SetCapability("username", Constants.sauceUser);
             capabilities.SetCapability("accessKey", Constants.sauceKey);
-            capabilities.SetCapability("name", 
+            capabilities.SetCapability("name",
             String.Format("{0}:{1}: [{2}]",
             TestContext.CurrentContext.Test.ClassName,
             TestContext.CurrentContext.Test.MethodName,
