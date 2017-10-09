@@ -9,3 +9,4 @@ build:
 
 test:
 	nunit3-console ParallelSelenium.sln --workers=18 /config:Release
+	
