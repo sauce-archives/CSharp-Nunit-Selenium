@@ -1,8 +1,7 @@
 
 # CSharp-NUnit-NMake (DEPRECATED)
-## Latest Repo Is At This URL!
-The latest and greatest repository is here: https://github.com/saucelabs-training/demo-csharp
-As of 2/20/19
+## [>>NUnit in Parallel using Automation Best Practices Is Now Here<<](https://github.com/saucelabs-training/demo-csharp/tree/master/SauceExamples/Web.Tests/BestPractices/test)
+
 
 ### Don't use the code below as it's outdated
 
